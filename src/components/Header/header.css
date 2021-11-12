@@ -1,0 +1,9 @@
+.text-left-align {
+    float: left;
+    margin: 5px;
+}
+
+.text-right-align {
+    float: right;
+    margin: 18px;
+}

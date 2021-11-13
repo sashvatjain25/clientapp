@@ -11,9 +11,8 @@ function App() {
     dispatch(actions.getrestaurantData())
   }, [])
   return (
-    <div className="App" style={{ display: 'grid' }}>
+    <div className="App">
       <Header />
-      
     </div>
   );
 }

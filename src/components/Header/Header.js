@@ -13,26 +13,33 @@ const Header = () => {
     } = state
     console.log('restaurantGetAPIData', restaurantGetAPIData)
     return (
-        <div id="textbox" >
+        <>
             {
                 restaurantGetAPIData?.length > 0 ?
                     <>
-                        <div style={{ display: 'flow-root' }}>
-                            <span className="text-left-align">
-                                <h3>{restaurantGetAPIData[0]?.restaurant_name}</h3>
-                            </span>
-                            <span className="text-right-align">
-                                <a>Orders
-                                    <img></img>
-                                </a>
-                            </span>
+                        <div className='container' >
+                            <div className='row'>
+                                <div className="col-8" style={{
+                                    textAlign: 'left'
+                                }}>
+                                    <h3>{restaurantGetAPIData[0]?.restaurant_name}</h3>
+                                </div>
+                                <div className="col-4"
+                                    style={{ textAlign: 'right' }}
+                                >
+                                    <a>Orders
+                                        <img></img>
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
 
                         <Categories categoryNames={restaurantGetAPIData[0]?.table_menu_list} />
                         <PageWrapper categoryNames={restaurantGetAPIData[0]?.table_menu_list} />
                     </> : 'loading....'
             }
-        </div>
+        </>
     )
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import './foodItemWrapper.css';
-import * as actions from '../../redux/actionCreators' 
+import * as actions from '../../redux/actionCreators'
 
 const FoodItemWrapper = ({ dish }) => {
     const dispatch = useDispatch()
@@ -11,7 +11,12 @@ const FoodItemWrapper = ({ dish }) => {
         numberOfOrders = 0
     } = state
     const handleOrderNumbersChange = (value) => {
-        dispatch(actions.updateNumberOfOrders(numberOfOrders + value))
+        if (numberOfOrders + value >= 0) {
+            dispatch(actions.updateNumberOfOrders(numberOfOrders + value))
+        } else {
+            dispatch(actions.updateNumberOfOrders(0))
+        }
+
     }
 
     return (
@@ -43,9 +48,9 @@ const FoodItemWrapper = ({ dish }) => {
                                 <>
                                     <div>
                                         <div class="btn-group" role="group" aria-label="Basic example" >
-                                            <button type="button" class="btn btn-primary" style={{ borderRadius: '20px 0px 0px 20px', lineHeight: '0.8' }} onClick={() => handleOrderNumbersChange(1)}>+</button>
+                                            <button type="button" class="btn btn-primary" style={{ borderRadius: '20px 0px 0px 20px', lineHeight: '0.8' }} onClick={() => handleOrderNumbersChange(-1)}>-</button>
                                             <span class="btn-primary" style={{ verticalAlign: 'center', textAlign: 'center', minWidth: '20px' }}>{numberOfOrders}</span>
-                                            <button type="button" class="btn btn-primary" style={{ borderRadius: '0px 20px 20px 0px', lineHeight: '0.8' }} onClick={() => handleOrderNumbersChange(-1)}>-</button>
+                                            <button type="button" class="btn btn-primary" style={{ borderRadius: '0px 20px 20px 0px', lineHeight: '0.8' }} onClick={() => handleOrderNumbersChange(1)}>+</button>
                                         </div>
                                     </div>
                                     {

@@ -27,6 +27,9 @@ export const getrestaurantData = () => (dispatch) => {
 
         }
     })
-
-
 }
+
+export const updateNumberOfOrders = (value) => ({
+    type: actions?.UPDATE_NUMBER_OF_ORDERS,
+    payload: value
+})

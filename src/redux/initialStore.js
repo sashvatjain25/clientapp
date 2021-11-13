@@ -1,4 +1,5 @@
 export const initialStore = {
     pageIndex: 0,
-    restaurantGetAPIData: []
+    restaurantGetAPIData: [],
+    numberOfOrders: 0,
 }

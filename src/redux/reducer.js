@@ -14,6 +14,11 @@ const reducer = (state = initialStore, action) => {
                 ...state,
                 restaurantGetAPIData: action.payload
             }
+        case actions.UPDATE_NUMBER_OF_ORDERS:
+            return {
+                ...state,
+                numberOfOrders: action.payload
+            }
         default:
             return state;
     }

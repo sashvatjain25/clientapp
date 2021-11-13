@@ -1,18 +1,18 @@
 import { useEffect } from 'react'
 import Header from './components/Header/Header'
-import Categories from './components/Categories/Categories';
-import PageWrapper from './components/PageWrapper/PageWrapper'
-import { getResturauntResponse } from './utilities/SeriveGateway/service_methods';
+import { useDispatch } from 'react-redux'
+import * as actions from './redux/actionCreators'
 
 function App() {
+  const dispatch = useDispatch()
+
   useEffect(() => {
-    getResturauntResponse().then((res) => console.log('app', res))
+    dispatch(actions.getrestaurantData())
   }, [])
   return (
     <div className="App" style={{ display: 'grid' }}>
       <Header />
-      <Categories />
-      <PageWrapper />
+      
     </div>
   );
 }

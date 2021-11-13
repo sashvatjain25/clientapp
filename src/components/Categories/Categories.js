@@ -10,7 +10,7 @@ const Categories = ({ categoryNames }) => {
     }
     return (
         <>
-            <div style={{ boxShadow: '0px 5px 5px #bfced6', display: 'flex', justifyContent: 'center' }}>
+            <div style={{ boxShadow: '0px 5px 5px #bfced6', display: 'flex', justifyContent: 'center', overflowX:'auto' }}>
                 {
                     categoryNames.map((categ, index) => {
                         return (<div style={{ marginLeft: '20px' }}

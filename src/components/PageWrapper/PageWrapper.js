@@ -12,16 +12,16 @@ const PageWrapper = ({ categoryNames }) => {
     return (
         <div>
             <SwipeableViews enableMouseEvents index={pageIndex}>
-            { categoryNames?.map((listType,i)=>{
-                return (
-                    <div style={{minHeight: '100px' }}>
-                        {listType?.category_dishes?.map((dish,ind)=>{
-                        return(<FoodItemWrapper dish={dish} />)
-                        })}
-                    </div>
-                )
-            }) }
-{/*                 
+                {categoryNames?.map((listType, i) => {
+                    return (
+                        <div style={{ minHeight: '100px' }}>
+                            {listType?.category_dishes?.map((dish, ind) => {
+                                return (<FoodItemWrapper dish={dish} />)
+                            })}
+                        </div>
+                    )
+                })}
+                {/*                 
                 <div style={{ background: 'pink', minHeight: '100px' }}><FoodItemWrapper />
                     <FoodItemWrapper /></div>
                 <div style={{ background: 'yellow', minHeight: '100px' }}><FoodItemWrapper /></div> */}

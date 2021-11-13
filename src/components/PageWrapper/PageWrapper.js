@@ -1,6 +1,7 @@
 import React from 'react'
 import SwipeableViews from 'react-swipeable-views'
 import { useSelector } from 'react-redux'
+import FoodItemWrapper from '../FoodItemWrapper/FoodItemWrapper'
 
 const PageWrapper = () => {
     const state = useSelector(state => state)
@@ -11,9 +12,13 @@ const PageWrapper = () => {
     return (
         <div>
             <SwipeableViews enableMouseEvents index={pageIndex}>
-                <div style={{ background: 'grey', height: '100px' }}>12</div>
-                <div style={{ background: 'pink', height: '100px' }}>45</div>
-                <div style={{ background: 'yellow', height: '100px' }}>2435</div>
+                <div style={{ background: 'grey', minHeight: '100px' }}><FoodItemWrapper />
+                    <FoodItemWrapper />
+                    <FoodItemWrapper />
+                    <FoodItemWrapper /></div>
+                <div style={{ background: 'pink', minHeight: '100px' }}><FoodItemWrapper />
+                    <FoodItemWrapper /></div>
+                <div style={{ background: 'yellow', minHeight: '100px' }}><FoodItemWrapper /></div>
             </SwipeableViews>
         </div>
     )

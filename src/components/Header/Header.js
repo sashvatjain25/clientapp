@@ -23,7 +23,7 @@ const Header = () => {
             {
                 restaurantGetAPIData?.length > 0 ?
                     <>
-                        <div className='container' style={{ maxWidth: `${window.innerWidth}px` }}>
+                        <div className='container' style={{ maxWidth: `${window.innerWidth}px`, padding: '20px' }}>
                             <div className='row'>
                                 <div className="col-8" style={{
                                     textAlign: 'left'
@@ -42,7 +42,7 @@ const Header = () => {
                                         // href="#" 
                                         class="cart position-relative d-inline-flex"
                                         aria-label="View your shopping cart">
-                                        Orders
+                                        My Orders &nbsp;
                                         <i class="bi bi-cart-fill"></i>
                                         <span class="cart-basket d-flex align-items-center justify-content-center">
                                             {numberOfOrders}

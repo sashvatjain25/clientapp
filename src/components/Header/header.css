@@ -21,8 +21,8 @@ a {
 .cart .cart-basket {
     font-size: .6rem;
     position: absolute;
-    top: 1px;
-    right: -5px;
+    top: -6px;
+    right: -8px;
     width: 15px;
     height: 15px;
     color: #fff;

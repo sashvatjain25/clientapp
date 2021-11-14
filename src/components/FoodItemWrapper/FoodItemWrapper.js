@@ -22,24 +22,24 @@ const FoodItemWrapper = ({ dish }) => {
     }
 
     return (
-        <div className='container' style={{padding: '20px', display: 'grid', borderBottom: '0.5px solid', maxWidth: `${window.innerWidth}px` }}>
+        <div className='container' style={{ padding: '20px', display: 'grid', borderBottom: '0.5px solid', maxWidth: `${window.innerWidth}px` }}>
             <div class="row" >
                 <div class="col-1">
                     {
-                        dish?.dish_Type === 1 ? 'Non-Veg' : ' Veg'
+                        dish?.dish_Type === 1 ? <img src='non-veg.png' id='Non-Veg' height='20px'></img> : <img src='veg.png' id='Veg' height='20px'></img>
                     }
                 </div>
                 <div class="col-9">
                     <div className='food-Wrapper'>
-                        <div>{dish?.dish_name}</div>
+                        <div><b>{dish?.dish_name}</b></div>
                         <div className='food-Wrapper-Sub'>
                             <div style={{ float: 'left' }}
                             // className="text-left-align"
-                            >{`${dish?.dish_currency} ${dish?.dish_price}`}</div>
+                            ><b>{`${dish?.dish_currency} ${dish?.dish_price}`}</b></div>
                             <div >
                                 <span style={{ float: 'right' }}
                                 // className="text-right-align"
-                                >{`${dish?.dish_calories} Calories`}</span>
+                                ><b>{`${dish?.dish_calories} Calories`}</b></span>
                             </div>
                         </div>
 
@@ -49,14 +49,14 @@ const FoodItemWrapper = ({ dish }) => {
                                 <>
                                     <div>
                                         <div class="btn-group" role="group" aria-label="Basic example" >
-                                            <button type="button" class="btn btn-primary" style={{ borderRadius: '20px 0px 0px 20px', lineHeight: '0.8' }} onClick={() => handleOrderNumbersChange(-1)}>-</button>
-                                            <span class="btn-primary" style={{ verticalAlign: 'center', textAlign: 'center', minWidth: '20px' }}>{itemCount}</span>
-                                            <button type="button" class="btn btn-primary" style={{ borderRadius: '0px 20px 20px 0px', lineHeight: '0.8' }} onClick={() => handleOrderNumbersChange(1)}>+</button>
+                                            <button type="button" class="btn btn-success" style={{ borderRadius: '20px 0px 0px 20px', lineHeight: '0.8' }} onClick={() => handleOrderNumbersChange(-1)}>-</button>
+                                            <span class="btn-success" style={{ verticalAlign: 'center', textAlign: 'center', minWidth: '20px' }}>{itemCount}</span>
+                                            <button type="button" class="btn btn-success" style={{ borderRadius: '0px 20px 20px 0px', lineHeight: '0.8' }} onClick={() => handleOrderNumbersChange(1)}>+</button>
                                         </div>
                                     </div>
                                     {
                                         dish?.addonCat?.length > 0 &&
-                                        <div>Customizations Available</div>
+                                        <div style={{ color: 'red' }}>Customizations Available</div>
                                     }
                                 </> :
                                 <div>Not Available</div>

@@ -23,7 +23,7 @@ const Header = () => {
             {
                 restaurantGetAPIData?.length > 0 ?
                     <>
-                        <div className='container' style={{ maxWidth: `${window.innerWidth}px`, padding: '20px' }}>
+                        <div className='container' style={{ maxWidth: `${window.innerWidth}px`, padding: '20px', position: 'sticky', top: '0vh', background: 'white', zIndex: 1 }}>
                             <div className='row'>
                                 <div className="col-8" style={{
                                     textAlign: 'left'

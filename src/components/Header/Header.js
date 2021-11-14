@@ -9,8 +9,10 @@ const Header = () => {
     const state = useSelector(state => state)
 
     const {
-        restaurantGetAPIData = []
+        restaurantGetAPIData = [],
+        numberOfOrders = 0
     } = state
+
     console.log('restaurantGetAPIData', restaurantGetAPIData)
     return (
         <>
@@ -28,7 +30,7 @@ const Header = () => {
                                     style={{ textAlign: 'right' }}
                                 >
                                     <a>Orders
-                                        <img></img>
+                                        <img alt={numberOfOrders}/>
                                     </a>
                                 </div>
                             </div>

@@ -22,7 +22,7 @@ const FoodItemWrapper = ({ dish }) => {
     }
 
     return (
-        <div className='container' style={{ padding: '10px', display: 'grid', borderBottom: '0.5px solid', maxWidth: `${window.innerWidth}px` }}>
+        <div className='container' style={{ padding: '2vh', display: 'grid', borderBottom: '0.5px solid', maxWidth: `${window.innerWidth}px` }}>
             <div class="row" >
                 <div class="col-1">
                     {

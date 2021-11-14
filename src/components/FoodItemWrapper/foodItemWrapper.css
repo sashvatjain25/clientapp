@@ -8,3 +8,24 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
+
+.outer-food-wrapper{
+    padding: 2vh;
+    display: grid;
+    border-bottom: 0.5px solid;
+    
+}
+
+.left-button{
+    border-radius: 20px 0px 0px 20px !important;
+    line-height: 0.8 !important;
+}
+.right-button{
+    border-radius: 0px 20px 20px 0px !important;
+    line-height: 0.8 !important;
+}
+.center-span{
+    vertical-align: center !important;
+     text-align: center !important;
+     min-width: 20px !important;
+}

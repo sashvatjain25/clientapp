@@ -22,14 +22,14 @@ const FoodItemWrapper = ({ dish }) => {
     }
 
     return (
-        <div className='container' style={{ padding: '2vh', display: 'grid', borderBottom: '0.5px solid', maxWidth: `${window.innerWidth}px` }}>
-            <div class="row" >
-                <div class="col-1">
+        <div className='container outer-food-wrapper' style={{ maxWidth: `${window.innerWidth}px` }}>
+            <div className="row" >
+                <div className="col-1">
                     {
                         dish?.dish_Type === 1 ? <img src='non-veg.png' id='Non-Veg' height='20px'></img> : <img src='veg.png' id='Veg' height='20px'></img>
                     }
                 </div>
-                <div class="col-9">
+                <div className={`${window.innerWidth > '500' ? "col-9" : "col-8"}`}>
                     <div className='food-Wrapper'>
                         <div><b>{dish?.dish_name}</b></div>
                         <div className='food-Wrapper-Sub'>
@@ -48,10 +48,10 @@ const FoodItemWrapper = ({ dish }) => {
                             dish?.dish_Availability ?
                                 <>
                                     <div>
-                                        <div class="btn-group" role="group" aria-label="Basic example" >
-                                            <button type="button" class="btn btn-success" style={{ borderRadius: '20px 0px 0px 20px', lineHeight: '0.8' }} onClick={() => handleOrderNumbersChange(-1)}>-</button>
-                                            <span class="btn-success" style={{ verticalAlign: 'center', textAlign: 'center', minWidth: '20px' }}>{itemCount}</span>
-                                            <button type="button" class="btn btn-success" style={{ borderRadius: '0px 20px 20px 0px', lineHeight: '0.8' }} onClick={() => handleOrderNumbersChange(1)}>+</button>
+                                        <div className="btn-group" role="group" aria-label="Basic example" >
+                                            <button type="button" className="btn btn-success left-button" onClick={() => handleOrderNumbersChange(-1)}>-</button>
+                                            <span className="btn-success center-span" style={{}}>{itemCount}</span>
+                                            <button type="button" className="btn btn-success right-button" style={{}} onClick={() => handleOrderNumbersChange(1)}>+</button>
                                         </div>
                                     </div>
                                     {
@@ -65,7 +65,7 @@ const FoodItemWrapper = ({ dish }) => {
 
                 </div>
 
-                <div class="col-2" style={{ float: 'right' }}>
+                <div className={`${window.innerWidth > '500' ? "col-2" : "col-3"}`} style={{ float: 'right' }}>
                     <img src={dish?.dish_image} className='img-fluid' alt='dish_img' width='100vw' height='100vw' />
                 </div>
             </div>

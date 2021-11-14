@@ -8,16 +8,19 @@
     margin: 18px;
 }
   
+.page-header{
+    padding: 2.5vh 1vh;
+    position: sticky;
+    top: 0vh;
+    background: white;
+    z-index: 1 
+}
+
 a {
     color: #343a40 !important;
     text-decoration: none !important;
   }
-  
-/* a.cart:hover {
     
-    color: #d60e96;
-  } */
-  
 .cart .cart-basket {
     font-size: .6rem;
     position: absolute;

@@ -7,3 +7,27 @@
     float: right;
     margin: 18px;
 }
+  
+a {
+    color: #343a40 !important;
+    text-decoration: none !important;
+  }
+  
+/* a.cart:hover {
+    
+    color: #d60e96;
+  } */
+  
+.cart .cart-basket {
+    font-size: .6rem;
+    position: absolute;
+    top: 1px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    background-color: #418deb;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  

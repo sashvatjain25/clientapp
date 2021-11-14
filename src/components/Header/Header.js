@@ -3,6 +3,7 @@ import './header.css'
 import { useSelector } from 'react-redux'
 import Categories from '../Categories/Categories';
 import PageWrapper from '../PageWrapper/PageWrapper'
+// import { Badge, Icon, withBadge } from 'react-native-elements'
 
 
 const Header = () => {
@@ -12,6 +13,9 @@ const Header = () => {
         restaurantGetAPIData = [],
         numberOfOrders = 0
     } = state
+
+
+    // const BadgedIcon = withBadge(numberOfOrders)(Icon);
 
     console.log('restaurantGetAPIData', restaurantGetAPIData)
     return (
@@ -29,8 +33,20 @@ const Header = () => {
                                 <div className="col-4"
                                     style={{ textAlign: 'right' }}
                                 >
-                                    <a>Orders
-                                        <img alt={numberOfOrders}/>
+                                    {/* <a>Orders */}
+                                    {/* <BadgedIcon type="material" name="shopping_cart" /> */}
+                                    {/* <img alt={numberOfOrders} /> */}
+
+                                    {/* </a> */}
+                                    <a
+                                        // href="#" 
+                                        class="cart position-relative d-inline-flex"
+                                        aria-label="View your shopping cart">
+                                        Orders
+                                        <i class="bi bi-cart-fill"></i>
+                                        <span class="cart-basket d-flex align-items-center justify-content-center">
+                                            {numberOfOrders}
+                                        </span>
                                     </a>
                                 </div>
                             </div>

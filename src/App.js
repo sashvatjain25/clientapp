@@ -11,7 +11,7 @@ function App() {
     dispatch(actions.getrestaurantData())
   }, [])
   return (
-    <div className="App">
+    <div className="App" style={{fontSize:'2vh'}}>
       <Header />
     </div>
   );

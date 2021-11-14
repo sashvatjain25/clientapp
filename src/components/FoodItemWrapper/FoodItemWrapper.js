@@ -22,8 +22,8 @@ const FoodItemWrapper = ({ dish }) => {
     }
 
     return (
-        <div className='container' style={{ display: 'grid', borderBottom: '0.5px solid', maxWidth: `${window.innerWidth}px` }}>
-            <div class="row" style={{ margin: '20px' }}>
+        <div className='container' style={{padding: '20px', display: 'grid', borderBottom: '0.5px solid', maxWidth: `${window.innerWidth}px` }}>
+            <div class="row" >
                 <div class="col-1">
                     {
                         dish?.dish_Type === 1 ? 'Non-Veg' : ' Veg'
@@ -66,7 +66,7 @@ const FoodItemWrapper = ({ dish }) => {
                 </div>
 
                 <div class="col-2" style={{ float: 'right' }}>
-                    <img src={dish?.dish_image} alt='dish_img' width='100px' height='100px' />
+                    <img src={dish?.dish_image} className='img-fluid' alt='dish_img' width='100vw' height='100vw' />
                 </div>
             </div>
         </div>

@@ -5,7 +5,6 @@ export const get = (endPoint) => {
         method: 'GET',
         url: endPoint
     }).then((response) => {
-        console.log('response', response)
         return response
     }).catch((err) => {
         return err.response

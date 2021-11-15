@@ -15,7 +15,6 @@ const PageWrapper = ({ categoryNames }) => {
         dispatch(actionCreator.changePageindex(value))
     }
 
-    console.log('state', state)
     return (
         <div>
             <SwipeableViews enableMouseEvents index={pageIndex} onChangeIndex={handleChangeIndex}>

@@ -9,7 +9,6 @@ const reducer = (state = initialStore, action) => {
                 ...state, pageIndex: action.payload
             }
         case actions.GET_RESTAURANT_DATA:
-            console.log('action.payload', action.payload)
             return {
                 ...state,
                 restaurantGetAPIData: action.payload

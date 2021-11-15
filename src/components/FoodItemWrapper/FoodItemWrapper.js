@@ -24,7 +24,7 @@ const FoodItemWrapper = ({ dish }) => {
     return (
         <div className='container outer-food-wrapper' style={{ maxWidth: `${window.innerWidth}px` }}>
             <div className="row" >
-                <div className="col-1">
+                <div className="col-1" style={{ textAlign: 'end' }}>
                     {
                         dish?.dish_Type === 1 ? <img src='non-veg.png' id='Non-Veg' height='20px'></img> : <img src='veg.png' id='Veg' height='20px'></img>
                     }
@@ -65,7 +65,7 @@ const FoodItemWrapper = ({ dish }) => {
 
                 </div>
 
-                <div className={`${window.innerWidth > '500' ? "col-2" : "col-3"}`} style={{ float: 'right' }}>
+                <div className={`${window.innerWidth > '500' ? "col-2" : "col-3"}`} style={{ textAlign: 'end`' }}>
                     <img src={dish?.dish_image} className='img-fluid' alt='dish_img' width='100vw' height='100vw' />
                 </div>
             </div>

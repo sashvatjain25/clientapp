@@ -13,7 +13,6 @@ export const getrestaurantData = () => (dispatch) => {
                 data = {},
                 status = 0,
             } = resp || {}
-            console.log('data', data)
             if (status === 200) {
                 const action = {
                     type: actions.GET_RESTAURANT_DATA,

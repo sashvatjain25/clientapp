@@ -10,7 +10,7 @@
 }
 
 .outer-food-wrapper{
-    padding: 2vh;
+    /* padding: 2vh; */
     display: grid;
     border-bottom: 0.5px solid;
     

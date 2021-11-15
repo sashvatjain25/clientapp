@@ -24,21 +24,19 @@ const FoodItemWrapper = ({ dish }) => {
     return (
         <div className='container outer-food-wrapper' style={{ maxWidth: `${window.innerWidth}px` }}>
             <div className="row" >
-                <div className="col-1" style={{ textAlign: 'end' }}>
+                <div className="col-auto p-2" >
                     {
                         dish?.dish_Type === 1 ? <img src='non-veg.png' id='Non-Veg' height='20px'></img> : <img src='veg.png' id='Veg' height='20px'></img>
                     }
                 </div>
-                <div className={`${window.innerWidth > '500' ? "col-9" : "col-8"}`}>
+                <div className="col p-2">
                     <div className='food-Wrapper'>
                         <div><b>{dish?.dish_name}</b></div>
                         <div className='food-Wrapper-Sub'>
                             <div style={{ float: 'left' }}
-                            // className="text-left-align"
                             ><b>{`${dish?.dish_currency} ${dish?.dish_price}`}</b></div>
                             <div >
                                 <span style={{ float: 'right' }}
-                                // className="text-right-align"
                                 ><b>{`${dish?.dish_calories} Calories`}</b></span>
                             </div>
                         </div>
@@ -65,8 +63,8 @@ const FoodItemWrapper = ({ dish }) => {
 
                 </div>
 
-                <div className={`${window.innerWidth > '500' ? "col-2" : "col-3"}`} style={{ textAlign: 'end`' }}>
-                    <img src={dish?.dish_image} className='img-fluid' alt='dish_img' width='100vw' height='100vw' />
+                <div className="col-auto p-2" style={{ textAlign: 'end' }}>
+                    <img src={dish?.dish_image} className='img-fluid' alt='dish_img' width='100vw' />
                 </div>
             </div>
         </div>
